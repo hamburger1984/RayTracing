@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayTracing", "RayTracing\RayTracing.csproj", "{1DF7B499-D6DE-480D-AF65-3A9C6C987AEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneWeekend", "OneWeekend\OneWeekend.csproj", "{7D79BD39-844D-4D4C-8BFA-540CD6B52352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DF7B499-D6DE-480D-AF65-3A9C6C987AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF7B499-D6DE-480D-AF65-3A9C6C987AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF7B499-D6DE-480D-AF65-3A9C6C987AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF7B499-D6DE-480D-AF65-3A9C6C987AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D79BD39-844D-4D4C-8BFA-540CD6B52352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D79BD39-844D-4D4C-8BFA-540CD6B52352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D79BD39-844D-4D4C-8BFA-540CD6B52352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D79BD39-844D-4D4C-8BFA-540CD6B52352}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
