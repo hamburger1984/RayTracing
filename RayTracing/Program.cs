@@ -23,8 +23,17 @@ app.MapGet("chapter2",
     {
         return Results.Stream(
             async s => { await Chapter2.SimpleGradient(s, width, height); },
-            contentType: "image/x-portable-pixmap",
-            fileDownloadName: $"Chapter2_{width}x{height}.ppm");
+            "image/x-portable-pixmap",
+            $"Chapter2_{width}x{height}.ppm");
+    });
+
+app.MapGet("chapter3",
+    (int width, int height) =>
+    {
+        return Results.Stream(
+            async s => { await Chapter3.SimpleGradient(s, width, height); },
+            "image/x-portable-pixmap",
+            $"Chapter3_{width}x{height}.ppm");
     });
 
 app.Run();
