@@ -1,6 +1,6 @@
 @RayTracing_HostAddress = http://localhost:5212
 
-GET {{RayTracing_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{RayTracing_HostAddress}}/chapter2?width=200&height=200
+Accept: image/x-portable-pixmap
 
 ###
