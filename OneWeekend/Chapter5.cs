@@ -1,12 +1,29 @@
 namespace OneWeekend;
 
-public static class Chapter4
+public static class Chapter5
 {
     private static readonly Color White = new Color(1, 1, 1);
     private static readonly Color Blueish = new Color(0.5f, 0.7f, 1);
+    private static readonly Color Red = new Color(1, 0, 0);
 
+    private static bool HitSphere(Point3 center, float radius, Ray ray)
+    {
+        var oc = center - ray.Origin;
+        var rayDir = ray.Direction;
+        var a = rayDir.Dot(rayDir);
+        var b = -2f * rayDir.Dot(oc);
+        var c = oc.Dot(oc) - radius * radius;
+        var discriminant = b * b - 4f*a * c;
+        return discriminant >= 0;
+    }
+    
+    private static readonly Point3 SphereCenter = new Point3(0, 0, -1f);
+    private const float SphereRadius = 0.5f;
     private static Color RayColor(Ray ray)
     {
+        if (HitSphere(SphereCenter, SphereRadius, ray))
+            return Red;
+        
         var unitDirection = ray.Direction.Normalize();
         var a = 0.5f * (unitDirection.Y + 1f);
         return (1f - a) * White + a * Blueish;

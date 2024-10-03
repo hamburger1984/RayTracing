@@ -36,14 +36,22 @@ app.MapGet("chapter3",
             $"Chapter3_{width}x{height}.ppm");
     });
 
-
 app.MapGet("chapter4",
     (int width = 800) =>
     {
         return Results.Stream(
             async s => { await Chapter4.RenderImage(s, width); },
             "image/x-portable-pixmap",
-            $"Chapter3_{width}.ppm");
+            $"Chapter4_{width}.ppm");
+    });
+
+app.MapGet("chapter5",
+    (int width = 800) =>
+    {
+        return Results.Stream(
+            async s => { await Chapter5.RenderImage(s, width); },
+            "image/x-portable-pixmap",
+            $"Chapter5_{width}.ppm");
     });
 
 app.Run();
