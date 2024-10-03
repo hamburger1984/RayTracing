@@ -24,4 +24,19 @@ public class Color:Vec3
         await writer.WriteLineAsync($"{r} {g} {b}");
     }
     
+    public static Color operator +(Color a, Color b)
+    {
+        return new Color(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+    }
+
+    public static Color operator *(Color a, float b)
+    {
+        return new Color(a.X * b, a.Y * b, a.Z * b);
+    }
+    
+    public static Color operator *(float a, Color b)
+    {
+        return new Color(a * b.X, a * b.Y, a * b.Z);
+    }
+    
 }

@@ -19,7 +19,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapGet("chapter2",
-    (int width, int height) =>
+    (int width = 600, int height = 400) =>
     {
         return Results.Stream(
             async s => { await Chapter2.SimpleGradient(s, width, height); },
@@ -28,12 +28,22 @@ app.MapGet("chapter2",
     });
 
 app.MapGet("chapter3",
-    (int width, int height) =>
+    (int width = 600, int height = 400) =>
     {
         return Results.Stream(
             async s => { await Chapter3.SimpleGradient(s, width, height); },
             "image/x-portable-pixmap",
             $"Chapter3_{width}x{height}.ppm");
+    });
+
+
+app.MapGet("chapter4",
+    (int width = 800) =>
+    {
+        return Results.Stream(
+            async s => { await Chapter4.RenderImage(s, width); },
+            "image/x-portable-pixmap",
+            $"Chapter3_{width}.ppm");
     });
 
 app.Run();
