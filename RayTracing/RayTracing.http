@@ -9,3 +9,18 @@ GET {{RayTracing_HostAddress}}/chapter3?width=200&height=200
 Accept: image/x-portable-pixmap
 
 ###
+
+GET {{RayTracing_HostAddress}}/chapter4?width=200
+Accept: image/x-portable-pixmap
+
+###
+
+GET {{RayTracing_HostAddress}}/chapter5?width=200
+Accept: image/x-portable-pixmap
+
+###
+
+GET {{RayTracing_HostAddress}}/chapter6?width=200
+Accept: image/x-portable-pixmap
+
+###
